@@ -7,7 +7,7 @@ on:
 env:
   DOTNET_VERSION: '9.0'
   PUBLISH_DIR: 'publish'
-  APP_NAME: 'book-api'
+  APP_NAME: 'leon-pqsapi'
 
 jobs:
   build-and-deploy:
