@@ -43,7 +43,7 @@ namespace BookManagementSystemAPI
                     options.IncludeXmlComments(xmlPath);
                 }
             );
-
+            builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["ApplicationInsights:ConnectionStrings"]);
             // Add CORS services
             builder.Services.AddCors(options =>
             {
@@ -82,7 +82,7 @@ namespace BookManagementSystemAPI
                     ValidateLifetime = true,
                     ValidIssuer = builder.Configuration["Jwt:Issuer"],
                     ValidAudience = builder.Configuration["Jwt:Audience"],
-                    IssuerSigningKey = 
+                    IssuerSigningKey =
                     new SymmetricSecurityKey
                     (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
                 };
