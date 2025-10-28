@@ -43,7 +43,7 @@ namespace BookManagementSystemAPI
                     options.IncludeXmlComments(xmlPath);
                 }
             );
-            builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["ApplicationInsights:ConnectionStrings"]);
+            builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["ApplicationInsights:ConnectionString"]);
             // Add CORS services
             builder.Services.AddCors(options =>
             {
