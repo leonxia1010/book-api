@@ -44,6 +44,7 @@ namespace BookManagementSystemAPI
                 }
             );
             builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["ApplicationInsights:ConnectionString"]);
+            Console.WriteLine(11);
             // Add CORS services
             builder.Services.AddCors(options =>
             {
